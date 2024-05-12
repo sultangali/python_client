@@ -23,7 +23,7 @@ const Questions = () => {
         <Container>
           <Card className="static-card profile-access-denied-card">
             <Card.Body>
-              <h4>Жауап беру</h4>
+              <h4>Студентпен байланыс</h4>
               <Row>
                 {questions && questions.items ? (
                   questions.items.map(

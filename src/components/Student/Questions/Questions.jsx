@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 
@@ -27,8 +27,14 @@ const Questions = () => {
 
 
 
-  return (
-    <>
+  return (userData == null ? 
+    <div className=' d-flex row align-items-center justify-content-center' style={{backgroundColor: 'white', height: '70vh'}}>
+        <Spinner animation="border" role="status" color='primary'>
+            <span className="visually-hidden">Күтіңіз...</span>
+        </Spinner>
+    </div>
+    
+:<>
       <Container fluid style={{ background: "white" }}>
         <br />  
         <Container>

@@ -31,38 +31,37 @@ const Question = ({
     <>
       <Col lg={12} xs={12} style={{ margin: "12px 0" }}>
         <Card className="static-card profile-access-denied-card">
-          <h5 style={{ color: "#7209B7" }}>Сұрақ</h5>
-          <p style={{ color: "#7209B7" }}>
-            Кімнен: &nbsp;
+          <h5 style={{ color: "#7209B7" }}>Сұрақ. Кімнен: &nbsp;
             <span style={{ color: "black" }}>
               {student && student.lastname} &nbsp;
               {student && student.firstname}&nbsp;
               {student && student.patronymic}&nbsp;
-            </span>
-          </p>
+            </span></h5>
+          
 
           <Card.Body style={{ padding: "6px 0px 6px 24px" }}>
             <Row>
               <Col
                 lg={12}
                 xs={12}
-                style={{
-                  border: "1px solid #7209B7",
-                  borderRadius: "12.5px",
-                  padding: "12px 6px",
-                }}
+                
                 className="d-flex row justify-content-start"
               >
+                <Col lg={12}>
                 <p style={{ color: "#7209B7" }}>
                   Сұрақ:&nbsp;
                   <span style={{ color: "black" }}>{question}</span>
                 </p>
-                <h6 style={{ color: "#7209B7" }}>
+                </Col>
+                <Col lg={12} className="text-end">
+                  <h6 style={{ color: "#7209B7" }}>
                   {new Date(Date(createdAt))
                     .toISOString()
                     .substring(0, 16)
                     .replace("T", " ")}
-                </h6>
+                </h6></Col>
+                
+                
               </Col>
 
               <Col
@@ -81,7 +80,7 @@ const Question = ({
                 onChange={(event) => setAnswer(event.target.value)}
                   style={{
                     border: "1px solid #7209B7",
-                    borderRadius: "12.5px",
+                    borderRadius: "4px",
                     margin: "8px 0 24px 0",
                   }}
                   type="text"
@@ -93,7 +92,8 @@ const Question = ({
                 <Button 
                     disabled={!answer} 
                     onClick={() => answerForQuestion()}
-                    className="btn btn-primary signup shadow">
+                    className="btn btn-primary signup shadow"
+                    style={{borderRadius: '4px'}}>
                   Жіберу
                 </Button>
               </Col>

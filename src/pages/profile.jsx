@@ -266,7 +266,7 @@ const Profile = () => {
                           </Nav.Link>
                         </Nav.Item>
 
-                        {/* <hr style={{ margin: "0px" }} />
+                        <hr style={{ margin: "0px" }} />
                         <Nav.Item>
                           <Nav.Link
                             className="btn btn-primary outlined-btn p-link-btn"
@@ -280,7 +280,7 @@ const Profile = () => {
                           >
                             Мұғалімге сұрақ
                           </Nav.Link>
-                        </Nav.Item> */}
+                        </Nav.Item> 
                         <hr style={{ margin: "0px" }} />
                         
                       </Nav>

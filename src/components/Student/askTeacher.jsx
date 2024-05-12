@@ -30,7 +30,7 @@ const AskTeacher = () => {
 
     const teachersOptions = [{
         value: 0,
-        text: 'Мұғалімді таңдаңыз'
+        text: 'Сұрақ қоятын мұғалімді таңдаңыз'
     }];
 
     employees && employees.items 
@@ -53,19 +53,15 @@ const AskTeacher = () => {
         <Container>
             <Card className="static-card profile-access-denied-card">
                 <Card.Body>
-                <h4>Мұғалімге сұрақ қою</h4>
-                <hr />
-                <textarea 
-                    onChange={(event) => setTextarea(event.target.value)}
-                    type="text" 
-                    className="form-control" rows={'12'} />
-                      <br />
+                <h4>Мұғаліммен байланыс формасы</h4>
+                <br />
                       <Row>
                         <Col className="col-12 d-flex">
-                                            <select
+                        <select
                         selected={teacher}
                         onChange={(event) => setTeacher(event.currentTarget.value)}
                         className="form-control-input flex-fill form-select select-input"
+                        style={{borderRadius: '6px', border: '1px solid black '}}
                       >
                         {teachersOptions.map((option) => (
                           <option key={option.value} value={option.value}>
@@ -73,6 +69,14 @@ const AskTeacher = () => {
                           </option>
                         ))}
                       </select>
+                        </Col>
+                        <Col>
+                        <br />
+                        <textarea 
+                          onChange={(event) => setTextarea(event.target.value)}
+                          placeholder="Сұрақ мәтінін осында жазыңыз"
+                          type="text" 
+                          className="form-control" rows={'6'} />
                         </Col>
                         
                         <Col style={{marginTop: '24px'}} className="col-12 d-flex column justify-content-end">
@@ -85,7 +89,8 @@ const AskTeacher = () => {
                             <Button 
                                 onClick={() => sendMessage()}
                                 disabled={teacher == 0} 
-                                className="btn btn-primary signup shadow">Сұрақты жіберу</Button>
+                                className="btn btn-primary signup shadow"
+                                style={{borderRadius: '4px'}}>Сұрақты жіберу</Button>
                         </Col>
                       </Row>
                     

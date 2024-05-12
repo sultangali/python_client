@@ -188,8 +188,8 @@ const Profile = () => {
                               </Nav.Link>
                             </Nav.Item>
 
-                            {/* <hr style={{ margin: "0px" }} /> */}
-                            {/* <Nav.Item>
+                            <hr style={{ margin: "0px" }} />
+                            <Nav.Item>
                               <Nav.Link
                                 eventKey="contact"
                                 className="btn btn-primary outlined-btn p-link-btn"
@@ -201,7 +201,7 @@ const Profile = () => {
                                 }}>
                                 Оқушымен байланыс
                               </Nav.Link>
-                            </Nav.Item> */}
+                            </Nav.Item>
                           </>
                         )}
 
